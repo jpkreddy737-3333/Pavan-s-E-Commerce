@@ -1,0 +1,36 @@
+ .container {
+    height: 100px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    font-size: 28px;
+    
+
+}
+.container Nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.container a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.container button{
+    color: red;
+    font-size: 28px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.container a:hover{
+    color: aqua;
+    text-decoration: underline ;
+}
+.container button:hover{
+    color: white;
+    background-color: red;
+    font-weight: bold;
+}

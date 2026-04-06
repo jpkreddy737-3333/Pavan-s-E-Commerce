@@ -1,0 +1,38 @@
+.signup-data{
+    height: 650px;
+    width: 500px;
+    margin: 0px auto;
+    box-shadow: 0 0 15px blue;
+    border-radius: 25px;
+   text-align: center;
+   background-color: white;
+   color: black;
+   gap: 0px;
+   
+}
+
+.signup-data1{
+    display:flex;
+    justify-content: center;
+align-items:center;
+gap:0px;
+margin:0px 0;
+
+}
+.signup-data1 input{
+    border: none;
+    background: transparent;
+    border-bottom: 3px solid black;
+    outline: none;
+}
+.signup-data button{
+    font-size: 28px;
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+    border-radius: 12px;
+   
+}
+.link-data{
+    margin-top: 15px;
+}

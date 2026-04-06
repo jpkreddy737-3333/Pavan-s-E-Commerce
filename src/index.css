@@ -1,0 +1,8 @@
+body {
+  margin: 0;
+}
+.toastclass{
+  background-color: green;
+  color: whitesmoke;
+  font-size: 17px;
+}
