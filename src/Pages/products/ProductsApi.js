@@ -33,10 +33,10 @@ export function filterproducts(categoryName,setState){
 
 }
 
-
+const BASE_URL = "https://back-end-bro-mart-1.onrender.com";
 export function addToCart(product) {
   axios
-    .post("http://localhost:5001/cart/add-to-cart", product)
+    .post(`${BASE_URL}/cart/add-to-cart`, product)
     .then((res) => {
       toast.success("Product added in the Cart",{
            toastId: product.id,

@@ -4,11 +4,12 @@ import { useRef } from "react";
 import axios from "axios";
 import {toast} from "react-toastify";
 
-const URL = "http://localhost:5001/auth/sign-up";
+const BASE_URL = "https://back-end-bro-mart-1.onrender.com";
+const URL = `${BASE_URL}/auth/register`;
 function Signup(){
 
 
-    const navigate = useNavigate
+    const navigate = useNavigate();
 
     const nameRef = useRef(null);
     const cityRef = useRef(null);

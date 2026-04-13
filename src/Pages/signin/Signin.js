@@ -1,6 +1,7 @@
 import axios from "axios";
 import { toast } from "react-toastify";
-const URL = "http://localhost:5001/auth/sign-in";
+const BASE_URL = "https://back-end-bro-mart-1.onrender.com";
+const URL = `${BASE_URL}/auth/sign-in`;
 
 export function Loginuser(credentials,login){
     axios.post(URL,credentials).then((res)=>{
