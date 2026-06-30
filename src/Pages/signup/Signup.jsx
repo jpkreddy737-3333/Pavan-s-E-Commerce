@@ -4,8 +4,8 @@ import { useRef } from "react";
 import axios from "axios";
 import {toast} from "react-toastify";
 
-const BASE_URL = "https://back-end-bro-mart-1.onrender.com";
-const URL = `${BASE_URL}/auth/register`;
+const BASE_URL = "http://localhost:5000";
+const URL = `${BASE_URL}/api/auth/register`;
 function Signup(){
 
 
@@ -28,34 +28,36 @@ function Signup(){
         password:passwordRef.current.value
        }
         
-        axios.post(URL,data).then(function(res){
-            console.log(res.data);
-            if(res.data.ok){
-                toast("Registered Succefully",{
-                    autoClose:1000,
-                    className:"toastclass"
-                });
+      axios.post(URL, data).then(function(res){
+    console.log(res.data);
 
-                setTimeout(()=>{
-                    navigate("/")
-                },2000)
+    if(res.data.success){
+        toast("Registered Successfully", {
+            autoClose: 1000,
+            className: "toastclass"
+        });
 
-            nameRef.current.value="";
-            cityRef.current.value="";
-            genderRef.current.value="";
-            emailRef.current.value="";
-            phonenumRef.current.value="";
-            passwordRef.current.value="";
+        setTimeout(() => {
+            navigate("/");
+        }, 2000);
 
-            }else{
-                throw Error(res.data.error);
-            }
-            
+        nameRef.current.value = "";
+        cityRef.current.value = "";
+        genderRef.current.value = "";
+        emailRef.current.value = "";
+        phonenumRef.current.value = "";
+        passwordRef.current.value = "";
 
-        }).catch(function(error){
-            toast.error(error.message);
-            console.log(error);
-        })
+    } else {
+        throw Error(res.data.message);
+    }
+
+}).catch(function(error){
+    console.log(error.response?.data);
+    toast.error(
+        error.response?.data?.message || error.message
+    );
+});
     }
 
     return (
@@ -73,8 +75,8 @@ function Signup(){
                 </div>
 
                 <div className="signup-data1">
-                    <h1 ref={genderRef}>Gender:-</h1>
-                     <select name="gender" required ref={genderRef}>
+                    <h1>Gender:-</h1>
+                    <select name="gender" required ref={genderRef}>
             <option value="">Select Gender</option>
             <option value="male">Male</option>
             <option value="female">Female</option>

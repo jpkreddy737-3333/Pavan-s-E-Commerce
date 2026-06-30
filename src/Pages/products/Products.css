@@ -17,6 +17,7 @@
 
 .product-info{
     width: 1200px;
+    max-width: 95%;
     height: 520px;
     position: relative;
     background-repeat: no-repeat;
@@ -56,8 +57,10 @@
     margin: 15px auto;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     text-align: center;
+    gap: 15px;
     
 }
 .product-type img{
@@ -74,8 +77,9 @@
 
 }
 .card{
-    height: 405x;
+    height: 405px;
     width: 380px;
+    max-width: 90%;
     box-shadow: 0 0 15px blue;
     padding: 10px;
     margin: 15px auto;
@@ -116,3 +120,55 @@
     color: black;
  }
 
+@media (max-width: 900px) {
+    .product-info{
+        height: 420px;
+    }
+    .section-info h1{
+        font-size: 34px;
+    }
+    .section-info p{
+        font-size: 16px;
+    }
+    .product-type img{
+        width: 55px;
+        height: 55px;
+    }
+    .product-type h3{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .product-info{
+        height: 350px;
+        border-radius: 10px;
+    }
+    .section-info{
+        padding: 10px;
+    }
+    .section-info h1{
+        font-size: 22px;
+    }
+    .section-info p{
+        font-size: 12px;
+    }
+    .product-type{
+        gap: 8px;
+        padding: 10px;
+    }
+    .product-type img{
+        width: 45px;
+        height: 45px;
+    }
+    .product-type h3{
+        font-size: 11px;
+    }
+    .card{
+        width: 100%;
+    }
+    .product-data .card button{
+        font-size: 16px;
+        margin: 8px 6px 0px 0px;
+    }
+}

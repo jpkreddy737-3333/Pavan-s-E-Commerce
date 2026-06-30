@@ -12,7 +12,7 @@ function Contactus(){
              </div>
              <div className="contact">
                 <h1>E-Mail:-</h1>
-            <input type="e-mail" placeholder="Enter Your E-Mail" /> <br /> <br />
+            <input type="email" placeholder="Enter Your E-Mail" /> <br /> <br />
 
              </div>
             <button>Contact-Us</button>

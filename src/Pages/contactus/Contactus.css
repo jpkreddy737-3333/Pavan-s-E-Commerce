@@ -1,6 +1,7 @@
 .contact-data{
     height: 450px;
     width: 850px;
+    max-width: 95%;
     box-shadow: 0 0 15px blue;
     text-align: center;
     margin: 30px auto;
@@ -35,4 +36,27 @@
     margin: 10px 0;
     align-items: center;
     margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    .contact-data{
+        height: auto;
+        border-radius: 8%;
+        padding: 20px 15px;
+    }
+    .contact-data h1{
+        font-size: 22px !important;
+    }
+    .contact{
+        flex-direction: column;
+        gap: 5px;
+    }
+    .contact-data input{
+        width: 100%;
+        font-size: 14px;
+    }
+    .contact-data button{
+        font-size: 18px;
+        width: 100%;
+    }
 }

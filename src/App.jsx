@@ -6,15 +6,19 @@ import { useState } from "react";
 import {ToastContainer} from "react-toastify"
 
 function App(){
-  const [logindata, setLogindata] = useState(false);
+  const [logindata, setLogindata] = useState(
+  !!localStorage.getItem("token")
+);
 
-  function login(){
-    setLogindata(true);
-  }
+  function login(token){
+  localStorage.setItem("token", token);
+  setLogindata(true);
+}
 
   function logout(){
-    setLogindata(false);
-  }
+  localStorage.removeItem("token");
+  setLogindata(false);
+}
 
   return (
     <div>

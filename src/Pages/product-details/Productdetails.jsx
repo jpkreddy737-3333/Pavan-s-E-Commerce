@@ -3,9 +3,13 @@ import { useState,useEffect} from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 
 function Productdetails(){
+    
+
+    const {id} = useParams();
 
     useEffect(()=>{
         axios.get(`https://fakestoreapi.com/products/${id}`).then((res)=>{
@@ -14,9 +18,9 @@ function Productdetails(){
 
         }).catch((error)=>{
             alert("data Denied");
-            console(error);
+            console.log(error);
         })
-    },[])
+    },[id])
 
     const [stateproduct,setProduct]= useState({
     id:0,
@@ -29,7 +33,26 @@ function Productdetails(){
     },
     description:""
 });
-const {id} = useParams();
+
+const addToCart = () => {
+  
+
+  axios.post("http://localhost:5000/api/cart/add", {
+    product_id: stateproduct.id,
+    title: stateproduct.title,
+    image: stateproduct.image,
+    price: stateproduct.price
+  })
+  .then((res) => {
+    console.log("SUCCESS:", res.data);
+    toast.success("Product Added Sir/Mam");
+    
+  })
+  .catch((error) => {
+    console.log("ERROR:", error);
+    alert("Failed To Add Product");
+  });
+};
 
 
 
@@ -95,7 +118,15 @@ const {id} = useParams();
                         <Link to={`/products`} style={{textDecoration:"none"}}><button >Back-To-Products</button></Link>
                     </div>
                    <div className="product-button2">
-                     <button>Add-To-Cart</button>
+                     <button
+  onClick={() => {
+    
+    console.log("Button Clicked");
+    addToCart();
+  }}
+>
+  Add-To-Cart
+</button>
                    </div>
                 </div>
             </div>

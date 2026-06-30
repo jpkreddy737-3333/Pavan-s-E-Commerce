@@ -1,0 +1,27 @@
+.profile-box{
+    width: 400px;
+    max-width: 90%;
+    margin: 50px auto;
+    box-shadow: 0 0 10px black;
+    padding: 20px;
+}
+
+.profile-logout-btn{
+    margin-top: 20px;
+    background-color: red;
+    color: white;
+}
+
+@media (max-width: 480px) {
+    .profile-box{
+        margin: 25px auto;
+        padding: 15px;
+    }
+    .profile-box p{
+        font-size: 14px;
+    }
+    .profile-logout-btn{
+        width: 100%;
+        padding: 8px;
+    }
+}

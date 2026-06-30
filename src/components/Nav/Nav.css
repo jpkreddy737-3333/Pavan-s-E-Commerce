@@ -1,19 +1,17 @@
- .container {
-    height: 100px;
+.container {
+    min-height: 100px;
     background-color: black;
     color: white;
     padding: 20px;
     display: grid;
     grid-template-columns: 25% 75%;
     font-size: 28px;
-    
-
 }
-.container Nav{
+.container nav{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    
+    flex-wrap: wrap;
 }
 .container a{
     text-decoration: none;
@@ -33,4 +31,33 @@
     color: white;
     background-color: red;
     font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        font-size: 20px;
+        text-align: center;
+    }
+    .container nav {
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .container button {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        font-size: 16px;
+        padding: 12px;
+    }
+    .container nav {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .container button {
+        font-size: 16px;
+    }
 }

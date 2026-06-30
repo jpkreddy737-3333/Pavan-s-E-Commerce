@@ -104,9 +104,7 @@ useEffect(() => {
             <p>$ {ele.price}</p>
             <h3>{ele.category}</h3>
             <Link to={`/product-details/${ele.id}`}><button>Product-Details</button></Link>
-            <button style={{backgroundColor:"greenyellow", cursor:"pointer"}} onClick={()=>{
-                addToCart(ele);
-            }} >Add-To-Cart</button>
+            <button style={{backgroundColor:"greenyellow", cursor:"pointer"}} onClick={() => addToCart(ele)} >Add-To-Cart</button>
         </div>
     )
 })

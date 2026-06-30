@@ -5,11 +5,11 @@ function Home(){
     return (
         <div >
             <section  className="home-data">
-                <h1>Welcome To My--World!!!!!!</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius ipsam temporibus est quae quis tempora, officiis totam vero ad, quisquam provident praesentium corporis nobis? Est perspiciatis ab perferendis cum, aperiam repellat eligendi tempore incidunt nulla consequuntur voluptatibus totam illum repellendus. Corporis expedita impedit adipisci ipsa quam provident labore similique ex!
+                <h1>Welcome To BRO's Mart!!!!!!</h1>
+            <p>Discover the latest trends in fashion, electronics, and lifestyle products, all in one place. We bring you quality items at unbeatable prices, with new arrivals added every week.
 
             </p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo recusandae dignissimos cum. Minima impedit qui accusantium a repellat tenetur sunt error ipsa ducimus laboriosam velit delectus iste ullam fuga, doloremque repudiandae dolore, aliquam illo repellendus perspiciatis commodi! Sed vel quisquam quo dolor laborum est laudantium, eum, illo nobis maxime asperiores.
+            <p>Shop with confidence with our secure checkout, fast delivery, and easy returns. Whether you're looking for everyday essentials or something special, BRO's Mart has got you covered.
 
             </p>
 

@@ -1,6 +1,7 @@
 .signup-data{
     height: 650px;
     width: 500px;
+    max-width: 95%;
     margin: 0px auto;
     box-shadow: 0 0 15px blue;
     border-radius: 25px;
@@ -35,4 +36,30 @@ margin:0px 0;
 }
 .link-data{
     margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+    .signup-data{
+        height: auto;
+        padding: 20px 15px;
+        border-radius: 10%;
+    }
+    .signup-data1{
+        flex-direction: column;
+        gap: 4px;
+        margin: 10px 0;
+    }
+    .signup-data1 input, .signup-data1 select{
+        width: 100%;
+        font-size: 14px;
+    }
+    .signup-data button{
+        font-size: 18px;
+        width: 90%;
+        padding: 8px;
+        margin-top: 10px;
+    }
+    .link-data a{
+        font-size: 14px;
+    }
 }
