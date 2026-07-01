@@ -4,7 +4,7 @@ import { useRef } from "react";
 import axios from "axios";
 import {toast} from "react-toastify";
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://bros-mart-backend.onrender.com";
 const URL = `${BASE_URL}/api/auth/register`;
 function Signup(){
 

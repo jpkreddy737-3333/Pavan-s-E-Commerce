@@ -37,7 +37,7 @@ function Productdetails(){
 const addToCart = () => {
   
 
-  axios.post("http://localhost:5000/api/cart/add", {
+  axios.post("https://bros-mart-backend.onrender.com/api/cart/add", {
     product_id: stateproduct.id,
     title: stateproduct.title,
     image: stateproduct.image,
