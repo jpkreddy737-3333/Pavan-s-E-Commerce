@@ -11,7 +11,7 @@ script.src = "https://checkout.razorpay.com/v1/checkout.js";
 script.async = true;
 document.body.appendChild(script);
     axios
-      .get("http://localhost:5000/api/cart")
+      .get("https://bros-mart-backend.onrender.com/api/cart")
       .then((res) => {
         if (res.data.success) {
   setCarts(res.data.items);
@@ -26,7 +26,7 @@ document.body.appendChild(script);
   }, []);
        const handleRemove = (id) => {
   axios
-    .delete(`http://localhost:5000/api/cart/${id}`)
+    .delete(`https://bros-mart-backend.onrender.com/api/cart/${id}`)
     .then((res) => {
       if (res.data.success) {
         setCarts((prev) =>
@@ -51,7 +51,7 @@ const handlePayment = async () => {
     );
 
     const { data } = await axios.post(
-      "http://localhost:5000/api/payment/create-order",
+      "https://bros-mart-backend.onrender.com/api/payment/create-order",
       {
         amount: total,
       }
